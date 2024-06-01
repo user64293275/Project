@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.grid{
+  grid-template-columns:18% 72% 10%;
+  grid-template-areas: 
+  'Left Main Right';
+}
+
+.Left{
+  grid-area: Left;
+}
+.Right{
+  grid-area: Right;
+}
+.Main1{
+  grid-area: Main1;
+}
+.Main2{
+  grid-area: Main2;
+}
+.underline-from-left::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-from-left:hover::before {
+  width: 100%;
+}
+.Menu::before{
+  content: '';
+  transition: width 0.5s ease-in-out;
+}
+.Menu:hover::before{
+  width: 100%;
+}
+@keyframes slideInFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.scrollable-section {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollable-section::-webkit-scrollbar {
+  width: 8px;  /* ширина полосы прокрутки */
+}
+.scrollable-section::-webkit-scrollbar-track {
+  background: transparent;  /* фон дорожки полосы прокрутки */
+}
+.scrollable-section::-webkit-scrollbar-thumb {
+  background-color: #ffff;  /* цвет бегунка полосы прокрутки */
+  border-radius: 10px;  /* округлые углы */
+  border: 3px solid transparent;  /* отступы для бегунка */
+}
+.scrollable-section:hover {
+  -ms-overflow-style: auto;  /* Internet Explorer 10+ */
+  scrollbar-width: thin;  /* Firefox */
+}
+.scrollable-section:hover::-webkit-scrollbar {
+  display: block;  /* Safari and Chrome */
+}
